@@ -128,7 +128,7 @@ AUTHENTICATION_BACKENDS = [
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
-LOGIN_REDIRECT_URL = '/api/v1/'
+LOGIN_REDIRECT_URL = ''
 
 
 # Internationalization
