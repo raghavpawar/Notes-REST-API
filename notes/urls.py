@@ -22,7 +22,7 @@ from allauth.account.views import confirm_email
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include('api.urls')),
+    path('', include('api.urls')),
     url(r'^rest-auth/', include('rest_auth.urls')), # using the rest_auth package's default urls for user registration
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
     url(r'^account/', include('allauth.urls')), # using the django_allauth package's default urls for social account login and registration 
