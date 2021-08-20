@@ -34,8 +34,8 @@ def get_routes(request): # separate function to display the available routes for
 
 
     routes = [
-        'api/v1//notes/ : To view the notes of the logged in user',
-        'api/v1/notes/<int:pk>/ : To retrieve, update, or delete the note with the specified primary key',
+        '/api/v1/notes/ : To view the notes of the logged in user',
+        '/api/v1/notes/<int:pk>/ : To retrieve, update, or delete the note with the specified primary key',
         '/rest_auth/registration/ : To register a new account using the django_rest_auth package',
         '/rest_auth/login/ : To login to a registered account by providing the username/email-id and password',
         '/account/signup/ : To register a new account by providing username, email-id and password',
