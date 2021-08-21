@@ -13,6 +13,13 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import django_heroku
+import environ
+
+#  Initialize envirnoment variables
+
+env = environ.Env()
+
+environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-cyh%7f77t$gg3bgy8_=tah%uwrhf(v-iydfo62()e$(cp(lb%m'
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = "545e29e5d237bed726dfa9e1e0d15adcb9009c3f02ece868"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -180,12 +187,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
+EMAIL_HOST_USER = env('EMAIL_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_PASS')
 
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+AWS_ACCESS_KEY_ID = env('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = env('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = env('AWS_STORAGE_BUCKET_NAME')
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
