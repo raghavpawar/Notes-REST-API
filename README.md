@@ -1,6 +1,8 @@
 # Notes REST API
 
 This is a Note Making API made using the django-rest framework. You can use it in your React/React-Native or a Flutter mobile/web app.
+To see how to test this API deployed on the heroku server, please refer to this documentation: 
+https://documenter.getpostman.com/view/17031629/TzzDJv7Z
 
 
 ## Installation
